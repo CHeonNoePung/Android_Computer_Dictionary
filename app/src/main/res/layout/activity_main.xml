@@ -1,18 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<!-- activity_main.xml -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- 상단 제목 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="임의"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <!-- 목차와 사진 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 작은 목차와 사진 영역 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 작은 목차 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- 목차 항목 1 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. 개요"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="16dp" />
+
+                    <!-- 목차 항목 2 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. 역사"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="16dp" />
+
+                    <!-- 목차 항목 3 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3. 종류"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="16dp" />
+
+                </LinearLayout>
+
+                <!-- 사진 -->
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/your_image"
+                    android:padding="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 개요, 역사, 종류 내용 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 개요 내용 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="개요 내용"
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+            <!-- 역사 내용 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="역사 내용"
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+            <!-- 종류 내용 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="종류 내용"
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
